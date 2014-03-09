@@ -6,26 +6,44 @@
         <script type="text/javascript" src="battle.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
+
+            });
+            function letsbattle(){
+
                 var canvas = $("#arena");
                 var battle = new Battle(
                     canvas[0].getContext("2d"),
                     canvas.attr("width"),
                     canvas.attr("height"),
-                    ['./robot/boss-3.js', './robot/boss-2.js']
+                    [$('#red').val(), $('#blue').val()]
                 );
                 battle.run();
-            });
+                $('#battle').removeAttr("onclick");
+            };
         </script>
         <style type="text/css">
             #arena {
                 border: 1px solid grey;
             }
         </style>
+        <title>Robocode-JS Game - PK mode</title>
     </head>
     <body>
         <a href="https://github.com/youchenlee/robocode-js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-        <div>Help the blue tank to win <a href="stage0.html">Stage 0</a>, <a href="stage1.html">Stage 1</a>, <a href="stage2.html">Stage 2</a> and the <a href="stage3.html">the Final Stage</a></div>
-        <div><a href="pk.html">PK mode</a></div>
+        <div><a href="index.html">Robocode-JS Game</a> &gt; PK mode</div>
+        <select id="red" style="background-color:#e74c3c">
+            <option value="./robot/boss-1.js">boss1</option>
+            <option value="./robot/boss-2.js">boss2</option>
+            <option value="./robot/boss-3.js">boss3</option>
+            <option value="./robot/myrobot.js">myrobot</option>
+        </select>
+        <select id="blue" style="background-color:#3498db">
+            <option value="./robot/boss-1.js">boss1</option>
+            <option value="./robot/boss-2.js">boss2</option>
+            <option value="./robot/boss-3.js">boss3</option>
+            <option value="./robot/myrobot.js">myrobot</option>
+        </select>
+        <button id="battle" onclick="letsbattle();">Let's Battle!!!</button>
         <button id="enable-debug" onclick="triggerDebug();">Trigger debug</button>
         <hr />
         <canvas id="arena" width="600" height="500" style="float:left;"></canvas>
