@@ -38,7 +38,7 @@
             <option value="./robot/myrobot.js">myrobot</option>
             <option value="./robot/yarobot.js">yarobot</option>
             <option value="./robot/blueswen.js">blueswen</option>
-            <option value="./robot/childlike12.js">childlike12</option>
+            <option value="./robot/childlike12.js">blueswen</option>
         </select>
         <select id="blue" style="background-color:#3498db">
             <option value="./robot/boss-0.js">boss0</option>
@@ -48,7 +48,7 @@
             <option value="./robot/myrobot.js">myrobot</option>
             <option value="./robot/yarobot.js">yarobot</option>
             <option value="./robot/blueswen.js">blueswen</option>
-            <option value="./robot/childlike12.js">childlike12</option>
+            <option value="./robot/childlike12.js">blueswen</option>
         </select>
         <button id="battle" onclick="letsbattle();">Let's Battle!!!</button>
         <button id="enable-debug" onclick="triggerDebug();">Trigger debug</button>
